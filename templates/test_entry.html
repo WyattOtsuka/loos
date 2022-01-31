@@ -6,23 +6,53 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4963099746269601"
         crossorigin="anonymous"></script>
+    
+        <script>
+            function setButtons(drop) {
+                var options = ["Q","W","E","R","AA"]
+                hostDiv = document.getElementById("selectorDiv")
+
+                for (var j= 0; j < 10; j++) {
+
+                }
+
+                for (var i = 0; i < drop.value; i++) {
+                    newSelector = document.createElement("select")
+                    newSelector.id = i
+                    for (var j = 0; j < options.length; j++) {
+                        var option = document.createElement("option");
+                        option.value = options[j];
+                        option.text = options[j];
+                        newSelector.appendChild(option);
+                    }
+                    hostDiv.appendChild(newSelector)
+                }
+                
+            }
+        </script>
 </head>
 
 <body>
+    
     <div class="bb1"></div>
     <div class="centered">
         <p>This is the test entry page for testing buttons and refreshing.</p>
-        <button type="button" action = "/submit">Submit</button>
-        <form action="/submit">
-            <input list="browsers" name = "browsers">
-            <datalist id="browsers">
-                <option value="Internet Explorer">
-                <option value="Firefox">
-                <option value="Chrome">
-                <option value="Opera">
-                <option value="Safari">
-            </datalist>
-        </form>
+        <button type="button" onclick="setButtons(document.getElementById('selectButtons'))">Submit</button>
+        <div id="buttons">
+            <select id="selectButtons">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+    <div id="selectorDiv" class="centered">
+        <p id="demo">Hello</p>
+
+        <button id="btn" type="button">Try it</button>
+
     </div>
 
 </body>
