@@ -13,7 +13,10 @@
                 hostDiv = document.getElementById("selectorDiv")
 
                 for (var j= 0; j < 10; j++) {
-
+                    var element = document.getElementById(j);
+                    if (element != null) {
+                        element.parentNode.removeChild(element);
+                    }
                 }
 
                 for (var i = 0; i < drop.value; i++) {
@@ -49,10 +52,7 @@
         </div>
     </div>
     <div id="selectorDiv" class="centered">
-        <p id="demo">Hello</p>
-
-        <button id="btn" type="button">Try it</button>
-
+        <p id="demo">Select Abilities Here</p>
     </div>
 
 </body>
