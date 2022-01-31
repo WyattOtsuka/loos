@@ -15,3 +15,13 @@ def hello_world(data=None):
 @app.route('/robots.txt')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
+    
+@app.route('/test_entry')
+def testing_page_entry():
+    return render_template('test_entry.html')
+    
+@app.route('/submit')
+def submit():
+    req = request.form
+    print(req)
+    return render_template('test_entry.html')
