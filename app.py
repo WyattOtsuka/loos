@@ -6,11 +6,11 @@ app = Flask(__name__)
 @app.route("/home")
 @app.route("/home/<data>")
 def hello_world(data=None):
-    if data == None:
+    #if data == None:
         return render_template('home.html')
         
-    else:
-        return render_template('home.html', input = data)
+    #else:
+    #   return render_template('home.html', input = data)
 
 @app.route('/robots.txt')
 def static_from_root():
