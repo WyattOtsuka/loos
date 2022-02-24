@@ -11,7 +11,7 @@ def hello_world(data=None):
         
     #else:
     #   return render_template('home.html', input = data)
-@app.route("/updates")
+@app.route("/updateLog")
 def updateLog():
     return render_template('updateLog.html')
 
