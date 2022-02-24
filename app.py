@@ -11,6 +11,9 @@ def hello_world(data=None):
         
     #else:
     #   return render_template('home.html', input = data)
+@app.route("/updates")
+def updateLog():
+    return render_template('updateLog.html')
 
 @app.route('/robots.txt')
 def static_from_root():
