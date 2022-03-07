@@ -1,10 +1,9 @@
 <html>
 
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4963099746269601" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/home.css') }}">
     <title>Webapp Progresss Blog</title>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4963099746269601" crossorigin="anonymous"></script>
 
     <script>
         function setButtons(drop) {
@@ -32,16 +31,21 @@
 
         }
     </script>
+    <style>
+        p {
+            color: white
+        }
+    </style>
 </head>
 
-<body>
+<body class="bgdiv">
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/updateLog">Updates</a></li>
         <li><a href="/test_entry">Calculator</a></li>
     </ul>
     <div class="bb1"></div>
-    <div class="centered">
+    <div class="centerBox">
         <p>This is the test entry page for testing buttons and refreshing.</p>
         <div id="buttons">
             <select id="selectButtons">
@@ -60,7 +64,7 @@
         <button type="button" onclick="setButtons(document.getElementById('selectButtons'))">Submit</button>
 
     </div>
-    <div id="selectorDiv" class="centered">
+    <div id="selectorDiv" class="centerBox">
         <p id="demo">Select Ability Order Here</p>
     </div>
 
