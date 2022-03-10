@@ -25,3 +25,7 @@ def submit():
     req = request.form
     print(req)
     return render_template('test_entry.html')
+
+@app.route('/privacy')
+def privacy():
+        return render_template('privacy.html')
