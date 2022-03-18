@@ -18,6 +18,10 @@ def updateLog():
 @app.route('/robots.txt')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
+
+@app.route('/sw.js')
+def sw():
+    return send_from_directory(app.static_folder, request.path[1:])
     
 @app.route('/test_entry')
 def testing_page_entry():
